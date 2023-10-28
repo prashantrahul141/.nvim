@@ -7,6 +7,7 @@ local code_actions = null_ls.builtins.code_actions
 local sources = {
   formatting.prettier,
   formatting.stylua,
+  formatting.clang_format,
   code_actions.eslint,
 
   lint.shellcheck,

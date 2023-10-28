@@ -1,13 +1,13 @@
 local plugins = {
   -- transparent background
-{
-    "xiyaowong/transparent.nvim",
-    lazy = false,
-    config = function()
-      require "transparent"
-    end,
-  },
-
+  -- {
+  --   "xiyaowong/transparent.nvim",
+  --   lazy = false,
+  --   config = function()
+  --     require "transparent"
+  --   end,
+  -- },
+  --
   -- syntax highlighting using treesitter
   {
     "nvim-treesitter/nvim-treesitter",
@@ -64,19 +64,22 @@ local plugins = {
         "marksman",
 
         --web
-        "html",
-        "cssls",
-        "tsserver",
+        "html-lsp",
+        "css-lsp",
+        "tailwindcss-language-server",
+        "typescript-language-server",
         "eslint-lsp",
-
         "prettier",
+
         "stylua",
+
+        -- low level crap
+        "clangd",
+        "clang-format",
+        "cpplint",
       },
     },
   },
-
-  
-  
 }
 
 return plugins
