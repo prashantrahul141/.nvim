@@ -1,13 +1,13 @@
 local plugins = {
   -- transparent background
-  -- {
-  --   "xiyaowong/transparent.nvim",
-  --   lazy = false,
-  --   config = function()
-  --     require "transparent"
-  --   end,
-  -- },
-  --
+  {
+    "xiyaowong/transparent.nvim",
+    lazy = false,
+    config = function()
+      require "transparent"
+    end,
+  },
+
   -- syntax highlighting using treesitter
   {
     "nvim-treesitter/nvim-treesitter",
