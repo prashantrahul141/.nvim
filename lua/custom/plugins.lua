@@ -1,4 +1,13 @@
 local plugins = {
+  -- presence
+  -- {
+  --   "andweeb/presence.nvim",
+  --   lazy = false,
+  --   config = function()
+  --     require "custom.configs.presence_setup"
+  --   end,
+  -- },
+  --
   -- transparent background
   {
     "xiyaowong/transparent.nvim",
