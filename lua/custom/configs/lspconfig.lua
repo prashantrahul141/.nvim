@@ -18,11 +18,26 @@ local servers = {
 }
 
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
+  if lsp ~= "clangd" then
+    lspconfig[lsp].setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    }
+  end
 end
+
+
+-- idk it causes issues with some encoding stuff.
+lspconfig["clangd"].setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = {
+    "clangd",
+    "--offset-encoding=utf-16",
+  },
+}
+
+
 
 -- Without the loop, you would have to manually set up each LSP
 --
