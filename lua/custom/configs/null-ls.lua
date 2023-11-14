@@ -8,6 +8,7 @@ local sources = {
   formatting.prettier,
   formatting.stylua,
   formatting.clang_format,
+  formatting.black,
   code_actions.eslint,
 
   lint.shellcheck,

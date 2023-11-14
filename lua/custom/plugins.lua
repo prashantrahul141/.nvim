@@ -72,6 +72,9 @@ local plugins = {
         "lua-language-server",
         "marksman",
 
+        -- snake language
+        "pyright",
+
         --web
         "html-lsp",
         "css-lsp",

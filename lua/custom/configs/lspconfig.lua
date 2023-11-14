@@ -18,14 +18,13 @@ local servers = {
 }
 
 for _, lsp in ipairs(servers) do
-  if lsp ~= "clangd" then
+  if lsp ~= "clangd" or lsp ~= "pyright" then
     lspconfig[lsp].setup {
       on_attach = on_attach,
       capabilities = capabilities,
     }
   end
 end
-
 
 -- idk it causes issues with some encoding stuff.
 lspconfig["clangd"].setup {
@@ -37,7 +36,10 @@ lspconfig["clangd"].setup {
   },
 }
 
-
+lspconfig["pyright"].setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
 
 -- Without the loop, you would have to manually set up each LSP
 --
