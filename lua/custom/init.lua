@@ -6,7 +6,7 @@ local opt = vim.opt
 opt.clipboard = "unnamedplus"
 
 -- use nushell instead
-opt.shell = "/home/linuxbrew/.linuxbrew/bin/nu"
+opt.shell = "/bin/bash"
 
 -- relative line number.
 vim.wo.relativenumber = true
