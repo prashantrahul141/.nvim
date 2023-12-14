@@ -48,6 +48,15 @@ local plugins = {
     },
   },
 
+  -- auto tag renaame
+  {
+    "windwp/nvim-ts-autotag",
+    lazy = false,
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
+
   -- In order to modify the `lspconfig` configuration:
   {
     "neovim/nvim-lspconfig",
