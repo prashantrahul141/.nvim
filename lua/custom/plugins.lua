@@ -13,7 +13,12 @@ local plugins = {
     "xiyaowong/transparent.nvim",
     lazy = false,
     config = function()
-      require "transparent"
+      require("transparent").setup {
+        extra_groups = {
+          "NormalFloat",
+          "NvimTreeNormal",
+        },
+      }
     end,
   },
 
@@ -55,6 +60,12 @@ local plugins = {
     config = function()
       require("nvim-ts-autotag").setup()
     end,
+  },
+
+  -- vim surround.
+  {
+    "tpope/vim-surround",
+    lazy = false,
   },
 
   -- In order to modify the `lspconfig` configuration:
