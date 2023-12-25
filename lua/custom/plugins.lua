@@ -7,20 +7,6 @@ local plugins = {
   --     require "custom.configs.presence_setup"
   --   end,
   -- },
-  --
-  -- transparent background
-  {
-    "xiyaowong/transparent.nvim",
-    lazy = false,
-    config = function()
-      require("transparent").setup {
-        extra_groups = {
-          "NormalFloat",
-          "NvimTreeNormal",
-        },
-      }
-    end,
-  },
 
   -- syntax highlighting using treesitter
   {
@@ -57,15 +43,16 @@ local plugins = {
   {
     "windwp/nvim-ts-autotag",
     lazy = false,
+    ft = {
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "html",
+    },
     config = function()
       require("nvim-ts-autotag").setup()
     end,
-  },
-
-  -- vim surround.
-  {
-    "tpope/vim-surround",
-    lazy = false,
   },
 
   -- In order to modify the `lspconfig` configuration:

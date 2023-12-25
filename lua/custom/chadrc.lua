@@ -4,6 +4,8 @@ local M = {}
 M.ui = {
   theme = "bearded-arc",
 
+  transparency = true,
+
   -- nvdash (dashboard)
   nvdash = {
     load_on_startup = true,
