@@ -11,6 +11,7 @@ local plugins = {
   -- syntax highlighting using treesitter
   {
     "nvim-treesitter/nvim-treesitter",
+    commit = "27f68c0b6a",
     opts = {
       ensure_installed = {
         -- common
@@ -42,7 +43,8 @@ local plugins = {
   -- auto tag renaame
   {
     "windwp/nvim-ts-autotag",
-    lazy = false,
+    commit = "8515e48a2",
+    lazy = true,
     ft = {
       "javascript",
       "javascriptreact",
@@ -58,7 +60,7 @@ local plugins = {
   -- In order to modify the `lspconfig` configuration:
   {
     "neovim/nvim-lspconfig",
-
+    commit = "9099871a",
     dependencies = {
       "jose-elias-alvarez/null-ls.nvim",
       config = function()
@@ -71,9 +73,11 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+
   -- lsp
   {
     "williamboman/mason.nvim",
+    commit = "41e75af1",
     opts = {
       ensure_installed = {
         "lua-language-server",
