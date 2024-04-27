@@ -2,7 +2,7 @@
 local M = {}
 
 M.ui = {
-  theme = "gruvbox",
+  theme = "github_dark",
 
   transparency = true,
 

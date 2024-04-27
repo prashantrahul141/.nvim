@@ -1,4 +1,6 @@
 local configs = require "plugins.configs.lspconfig"
+local util = require "lspconfig/util"
+
 local on_attach = configs.on_attach
 local capabilities = configs.capabilities
 
@@ -30,6 +32,7 @@ end
 lspconfig["clangd"].setup {
   on_attach = on_attach,
   capabilities = capabilities,
+  filetypes = { "c", "cc", "cpp", "h", "hpp", "cxx" },
   cmd = {
     "clangd",
     "--offset-encoding=utf-16",
@@ -41,14 +44,19 @@ lspconfig["pyright"].setup {
   capabilities = capabilities,
 }
 
--- Without the loop, you would have to manually set up each LSP
---
--- lspconfig.html.setup {
---   on_attach = on_attach,
---   capabilities = capabilities,
--- }
---
--- lspconfig.cssls.setup {
---   on_attach = on_attach,
---   capabilities = capabilities,
--- }
+lspconfig.gopls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "gopls" },
+  filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  settings = {
+    gopls = {
+      completeUnimported = true,
+      usePlaceholders = true,
+      staticcheck = true,
+      analyses = {
+        unusedparams = true,
+      },
+    },
+  },
+}

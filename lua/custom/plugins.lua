@@ -36,6 +36,9 @@ local plugins = {
 
         -- py
         "python",
+
+        -- go
+        "go",
       },
     },
   },
@@ -100,6 +103,9 @@ local plugins = {
         "clangd",
         "clang-format",
         "cpplint",
+
+        -- go
+        "gopls",
       },
     },
   },
