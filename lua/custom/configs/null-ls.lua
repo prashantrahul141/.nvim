@@ -13,8 +13,6 @@ local sources = {
   code_actions.eslint,
   formatting.gofumpt,
   formatting.goimports_reviser,
-
-  lint.shellcheck,
 }
 
 null_ls.setup {

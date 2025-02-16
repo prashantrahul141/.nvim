@@ -39,6 +39,12 @@ local plugins = {
 
         -- go
         "go",
+
+        -- c#
+        "c_sharp",
+
+        -- julia
+        "julia",
       },
     },
   },
@@ -106,6 +112,12 @@ local plugins = {
 
         -- go
         "gopls",
+
+        -- c#
+        "csharpier",
+
+        -- julia
+        "julia-lsp",
       },
     },
   },
